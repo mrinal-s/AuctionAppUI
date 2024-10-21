@@ -1,1 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f7cedf;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header nav ul li {
+    display: inline;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.btn {
+    background-color: #36a2ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.hero-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #fbeff6;
+}
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.hero-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+.btn-watch-video {
+    background: linear-gradient(to right, #36a2ff, #61d0ff);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.testimonial {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e5f3ff;
+    margin-top: 20px;
+}
+.testimonial img {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.testimonial span {
+    font-weight: bold;
+}
+.explore-auctions {
+    padding: 40px;
+    text-align: center;
+}
+.explore-auctions h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.auctions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.auction-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.auction-item img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+.auction-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.auction-item .fav-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}

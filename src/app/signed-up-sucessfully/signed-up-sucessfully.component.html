@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{isEditProfile?"Genix Auctions - User Profile Updation Success":"Genix Auctions - Sign Up Success"}}</title>
+    
+</head>
+<body>
+    <header class="header">
+        <img src="../../assets/images/logo.png" alt="Logo">
+        <h1>Genix Auctions</h1>
+    </header>
+    <div class="container">
+        <h1>Uncover Deals, Unleash Excitement: <span>Dive into Our Auctions Today!</span></h1>
+        <div class="message">
+            {{isEditProfile ? "USER PROFILE UPDATED SUCCESSFULLY!":"SIGNED UP SUCCESSFULLY!"}}
+        </div>
+        <div *ngIf ="isEditProfile" class="signup-link">
+            <p><a (click)="navigateToAuctionsPage()"><ul>Go to Auctions Page</ul></a></p>
+        </div>
+       
+        <div class="illustration">
+            <img src="../../assets/images/signupsuccess.png" alt="Success Illustration">
+        </div>
+        <a *ngIf ="!isEditProfile" [routerLink]="['/app-login']" class="btn">Login Now</a> 
+        
+    </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genix Auctions</title>
+</head>
+<body>
+   
+    <app-header></app-header>
+
+  
+
+    <div class="container">
+        <h1>Welcome <span>{{userName}}!</span></h1>
+        <div class="cards">
+            <div class="card">
+                <img src="../../assets/images/camera.jpg" alt="Sony Black Headphones">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Sony Black Headphones</div>
+                    <div class="info">Minimum Bid: $100</div>
+                    <div class="info">Current Bid: <span class="price">$157</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Sony Black Headphones', 100, 157, '1 day 12 hrs 43 minutes','../../assets/images/camera.jpg')">Bid now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/images/airpods.jpg" alt="Apple AirPods">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Apple AirPod 2nd Gen</div>
+                    <div class="info">Minimum Bid: $80</div>
+                    <div class="info">Current Bid: <span class="price">$95</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Apple AirPod 2nd Gen', 80, 95, '1 day 12 hrs 43 minutes','../../assets/images/airpods.jpg')">Bid now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/images/airpods.jpg" alt="Apple AirPods">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Apple AirPod 2nd Gen</div>
+                    <div class="info">Minimum Bid: $80</div>
+                    <div class="info">Current Bid: <span class="price">$95</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Apple AirPod 2nd Gen', 80, 95, '1 day 12 hrs 43 minutes','../../assets/images/airpods.jpg')">Bid now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/images/powerbank.jpeg" alt="Apple AirPods">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Apple AirPod 2nd Gen</div>
+                    <div class="info">Minimum Bid: $80</div>
+                    <div class="info">Current Bid: <span class="price">$95</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Apple AirPod 2nd Gen', 80, 95, '1 day 12 hrs 43 minutes','../../assets/images/powerbank.jpeg')">Bid now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/images/powerbank.jpeg" alt="Power Bank">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Mi 3i Power Bank</div>
+                    <div class="info">Minimum Bid: $40</div>
+                    <div class="info">Current Bid: <span class="price">$46</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Mi 3i Power Bank', 40, 46, '1 day 12 hrs 43 minutes','../../assets/images/powerbank.jpeg')">Bid now</a>
+                </div>
+            </div>
+        </div>
+     
+        <div class="cards">
+            <div class="card">
+                <img src="../../assets/images/camera.jpg" alt="Sony Black Headphones">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Sony Black Headphones</div>
+                    <div class="info">Minimum Bid: $100</div>
+                    <div class="info">Current Bid: <span class="price">$157</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Sony Black Headphones', 100, 157, '1 day 12 hrs 43 minutes','../../assets/images/camera.jpg')">Bid now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/images/airpods.jpg" alt="Apple AirPods">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Apple AirPod 2nd Gen</div>
+                    <div class="info">Minimum Bid: $80</div>
+                    <div class="info">Current Bid: <span class="price">$95</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Apple AirPod 2nd Gen', 80, 95, '1 day 12 hrs 43 minutes','../../assets/images/airpods.jpg')">Bid now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/images/airpods.jpg" alt="Apple AirPods">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Apple AirPod 2nd Gen</div>
+                    <div class="info">Minimum Bid: $80</div>
+                    <div class="info">Current Bid: <span class="price">$95</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Apple AirPod 2nd Gen', 80, 95, '1 day 12 hrs 43 minutes','../../assets/images/airpods.jpg')">Bid now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/images/powerbank.jpeg" alt="Apple AirPods">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Apple AirPod 2nd Gen</div>
+                    <div class="info">Minimum Bid: $80</div>
+                    <div class="info">Current Bid: <span class="price">$95</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Apple AirPod 2nd Gen', 80, 95, '1 day 12 hrs 43 minutes','../../assets/images/powerbank.jpeg')">Bid now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../assets/images/powerbank.jpeg" alt="Power Bank">
+                <div class="badge">Live Auction</div>
+                <div class="card-body">
+                    <div class="title">Mi 3i Power Bank</div>
+                    <div class="info">Minimum Bid: $40</div>
+                    <div class="info">Current Bid: <span class="price">$46</span></div>
+                    <div class="info">Ends in: 1 day 12 hrs 43 minutes</div>
+                    <a class="btn" (click)="openAuctionDetail('Mi 3i Power Bank', 40, 46, '1 day 12 hrs 43 minutes','../../assets/images/powerbank.jpeg')">Bid now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+
+</html>

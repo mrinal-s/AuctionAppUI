@@ -1,0 +1,81 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: left;
+        }
+        
+        .header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+            flex-grow: 1;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h1 span {
+            color: #007bff;
+        }
+        .message {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #28a745;
+        }
+        .illustration img {
+            width: 100%;
+            max-width: 600px;
+        }
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff ;
+            
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    

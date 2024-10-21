@@ -1,0 +1,42 @@
+
+<header class="header" *ngIf="isUserLoggedIn">
+    <div class="header-left">
+        <img src="../../assets/images/logo.png" alt="Logo" class="logo">
+        <h1>Genix Auctions</h1>
+    </div>
+    <nav class="menu">
+        <a [routerLink]="['/app-auction-list']">Auctions</a>
+        <a>Bidding</a>
+        <a>About us</a>
+    </nav>
+    <div class="profile" (click)="toggleDropdown()">
+        <img src="../../assets/images/profile.jpeg" alt="Profile Image" class="profile-image">
+        <div class="dropdown-menu" [class.show]="isDropdownOpen">
+            <a (click)="viewProfile()">View Profile</a>
+            <a (click)="editProfile()">Edit Profile</a>
+            <a>Settings</a>
+            <a>My Bids</a>
+            <a>Credit Cards</a>
+            <a [routerLink]="['/app-auction-list']">My Auctions</a>
+            <a>Notifications</a>
+            <a (click)="navigateToLogin()">Log Out</a>
+        </div>
+    </div>
+</header>
+
+<header *ngIf="!isUserLoggedIn">
+    <div class="logo">
+        <img src="../../assets/images/logo.png" alt="Genix Auctions Logo">
+        <span>Genix Auctions</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a>Auctions</a></li>
+            <li><a>Bidding</a></li>
+            <li><a>About Us</a></li>
+            <li><a>English</a></li>
+        </ul>
+    </nav>
+    <a [routerLink]="['/app-login']" class="login-link">Login</a> 
+    <a class="btn">Get Started</a>
+</header>

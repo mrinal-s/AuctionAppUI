@@ -1,0 +1,83 @@
+<!-- <header class="header">
+    <div class="header-left">
+        <img src="../../assets/images/logo.png" alt="Logo" class="logo">
+        <h1>Genix Auctions</h1>
+    </div>
+    <nav class="menu">
+        <a href="#">Auctions</a>
+        <a href="#">Bidding</a>
+        <a href="#">About us</a>
+    </nav>
+    <div class="profile">
+        <img src="../../assets/images/profile.jpeg" alt="Profile Image" class="profile-image">
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="#">View Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">My Bids</a>
+            <a href="#">Credit Cards</a>
+            <a href="#">My Auctions</a>
+            <a href="#">Notifications</a>
+            <a href="#">Log Out</a>
+        </div>
+    </div>
+</header> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genix Auctions</title>
+</head>
+<body>
+   
+    <app-header></app-header>
+<div class="container">
+    <div class="left-section">
+        <img src="{{image}}" alt="{{auctionName}}">
+        <div class="auction-details">
+            <p>Live Auction</p>
+            <h2>{{auctionName}}</h2>
+            <p>Minimum Bid <span class="price">${{minBid}}</span></p>
+            <p>Current Bid <span class="price">${{currentBid}}</span></p>
+            <p>Ends in : {{expiry}}</p>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <a href="#">Back to catalog</a>
+        <h3>Description</h3>
+        <p>Immerse yourself in pristine sound quality with the {{auctionName}}...</p>
+
+        <h3>Reviews</h3>
+        <div class="reviews-container">
+            <div class="review">
+                <img src="https://via.placeholder.com/40" alt="Reviewer">
+                <div>
+                    <span class="star">★★★★★</span>
+                    <p>These headphones are a game-changer for my daily commute...</p>
+                    <small>Kristin Watson - March 14, 2021</small>
+                </div>
+            </div>
+
+            <div class="review">
+                <img src="https://via.placeholder.com/40" alt="Reviewer">
+                <div>
+                    <span class="star">★★★★★</span>
+                    <p>I'm blown away by the sound clarity these headphones offer...</p>
+                    <small>Jenny Wilson - January 28, 2021</small>
+                </div>
+            </div>
+        </div>
+
+        <h3>Recent Bids</h3>
+        <ul class="bidding-list">
+            <li>The Floor bids ${{currentBid}}</li>
+            <li>The Floor bids ${{minBid - 7}}</li>
+            <li>Internet Bidder bids ${{minBid - 10}}</li>
+            <!-- More bids here -->
+        </ul>
+
+        <a class="btn-bid" href="#">Bid Now</a>
+    </div>
+</div>
+</body>

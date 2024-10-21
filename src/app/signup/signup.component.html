@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title *ngIf="!isEditProfile || !isViewProfile">Genix Auctions - Sign Up</title>
+    <title *ngIf="isEditProfile">Genix Auctions - Edit Profile</title>
+    <title *ngIf="isViewProfile">Genix Auctions - Edit Profile</title>
+</head>
+<body>
+    <header class="header">
+        <img src="../../assets/images/logo.png" alt="Logo">
+        <h1>Genix Auctions</h1>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h1 *ngIf="!isEditProfile && !isViewProfile">Sign up</h1>
+            <h1 *ngIf="isEditProfile">Edit Profile</h1>
+            <h1 *ngIf="isViewProfile">View Profile</h1>
+            <p *ngIf="!isEditProfile && !isViewProfile">New bidders, as soon as you have submitted your information you will be eligible to bid in the auction.</p>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" [ngClass]="{ 'disabled-div': isViewProfile }">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" formControlName="firstName" required>
+                    <div *ngIf="signupForm.get('firstName')?.invalid && (signupForm.get('firstName')?.touched || signupForm.get('firstName')?.dirty)" class="error-message">
+                        <small *ngIf="signupForm.get('firstName')?.errors?.['required']">First name is required.</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" formControlName="lastName">
+                </div>
+                <div class="form-group" [ngClass]="{ 'disabled-div': isEditProfile }" >
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" formControlName="email" required>
+                    <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.touched || signupForm.get('email')?.dirty)" class="error-message">
+                        <small *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</small>
+                        <small *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format.</small>
+                    </div>
+                </div>
+                <div class="form-group"  *ngIf="!isEditProfile && !isViewProfile" >
+                    <label for="password">Password</label>
+                    <input type="password" id="password" formControlName="password" required>
+                    <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.touched || signupForm.get('password')?.dirty)" class="error-message">
+                        <small *ngIf="signupForm.get('password')?.errors?.['required']">Password is required.</small>
+                        <small *ngIf="signupForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.</small>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="receive-emails" formControlName="isRecieveOutbidEmails">
+                    <label for="receive-emails">Receive outbid emails</label>
+                </div>
+                <button *ngIf="!isViewProfile" type="submit" class="btn">{{ isEditProfile ? 'Update' : 'Submit' }}</button>
+            </form>
+            <div *ngIf="message" class="error-message">{{ message }}</div>
+
+            <div class="signup-container" *ngIf="!isEditProfile && !isViewProfile">
+                <hr>
+                <p>or sign up with</p>
+                <div class="signup-options">
+                    <div class="signup-option">
+                        <img src="https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/544/Google__G__Logo-512.png" alt="Google">
+                        Google
+                    </div>
+                    <div class="signup-option">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+                        Apple
+                    </div>
+                    <div class="signup-option">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                        Facebook
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="signup-link">
+                <p *ngIf="isViewProfile"><a [routerLink]="['/app-auction-list']">Go to Auction List</a></p>
+                <p>Want to know more? <a href="#">Auction rules</a></p>
+            </div>
+        </div>
+
+        <div class="illustration">
+            <img src="../../assets/images/signupImage.png" alt="Illustration">
+        </div>
+    </div>
+
+</body>
+</html>
